@@ -1,0 +1,16 @@
+Sat - 6/8
+	Mark: HTML
+	Connor: Flask
+	Both: Vision Plan, Github
+Sun - 6/9:
+	Mark: CSS
+	Connor: Flask
+	Both: Vision Plan
+Mon - 6/10: 
+	Mark: Flask
+	Connor: Flask DBs
+Tue - 6/11:
+	Mark: Page X
+	Connor: Page Y
+
+
