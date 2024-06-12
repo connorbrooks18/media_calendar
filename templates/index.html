@@ -1,7 +1,51 @@
 {% extends "base.html" %}
 
 {% block title %}
+MC
 {% endblock title %}
 
+
+{% block head %}
+{% endblock head %}
+
 {% block body %}
+
+<header>
+    <h1 class="website-title">What to Watch?</h1>
+</header>
+
+<main>
+
+    <table id="calendar">
+        <tr>
+            <th id="day1"></th>
+            <th id="day2"></th>
+            <th id="day3"></th>
+            <th id="day4"></th>
+            <th id="day5"></th>
+            <th id="day6"></th>
+            <th id="day7"></th>
+        </tr>
+        <tr>
+            {% for day in week_cal %}
+            <td>
+                <ul>
+                    {% for event in day %}
+                    <li>{{ event }}</li>
+                    {% endfor %}
+                </ul>
+            </td>
+            {% endfor %}
+        </tr>
+    </table>
+
+
+
+
+</main>
+
+
+<script src="{{url_for('static', filename='js/index.js')}}"></script>
+
 {% endblock body %}
+
