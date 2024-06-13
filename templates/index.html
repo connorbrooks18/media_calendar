@@ -9,9 +9,27 @@ MC
 {% endblock head %}
 
 {% block body %}
+<nav class = "navbar" >
+    <div class= "navdiv">
+        <div class = "logo"><a href="http://127.0.0.1:5000/">Media Calandar</a> </div>
+        <ul>
+            <li><a href="">Home</a></li>
+            <li><a href="">About</a></li>
+            <button><a href="">Sign Up</a></button>
+            <button><a href="">Log In</a></button>
 
-<header>
-    <h1 class="website-title">What to Watch?</h1>
+
+        </ul>
+        </div>
+
+
+    </div>
+
+</nav>
+<header class="home-header">
+    <!--<h1 class="website-title">What to Watch?</h1>
+    <button class="log-in">Log in</button> -->
+
 </header>
 
 <main>
@@ -38,6 +56,8 @@ MC
             {% endfor %}
         </tr>
     </table>
+
+
 
 
 

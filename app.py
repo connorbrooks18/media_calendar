@@ -16,9 +16,9 @@ events = [
 def home():
     return render_template("index.html", week_cal=events)
 
+
 # @app.route("/view/<name>/")
-# def media(name):
-#     return "Cannot get '" + name + "'"
+
 
 
  
