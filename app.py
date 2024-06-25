@@ -1,5 +1,13 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, redirect, url_for
 from cryptography.fernet import Fernet
+import sqlite3 as sql
+
+
+
+with open("key", "r") as f:
+    key = f.read()[2:-1]
+
+
 
 app = Flask(__name__)
 
@@ -23,18 +31,28 @@ def home():
 @app.route("/login", methods = ["POST", "GET"])
 def login():
     if request.method == "POST":
+        # for pair in request.form.items():
+            #encrypt(bytes(pair[1], "utf8"))
+
+
+        return redirect(url_for("home"))
+    else:
+        return render_template("login.html" )
+
+@app.route("/signup", methods = ["POST", "GET"])
+def signup():
+    if request.method == "POST":
         for pair in request.form.items():
             print(pair)
 
 
-        return home()
+        return redirect(url_for("home"))
     else:
-        return render_template("login.html" )
-
+        return render_template("signup.html" )
 
 
 def encrypt(password):
-    return Fernet("ok").encrypt(password)
+    return Fernet(key).encrypt(password)
 
  
 
