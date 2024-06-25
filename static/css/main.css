@@ -6,9 +6,8 @@
 .navbar{
     background-color: red;
     font-family: 'Courier New', Courier, monospace;
-    padding-right: 15px;
-    padding-left:  15px;
-    padding-bottom: 30px;
+    padding: 1rem;
+    margin-bottom: 3rem;
     
 }
 .navdiv{
@@ -16,23 +15,22 @@
     align-items: center;
     justify-content: space-between;
     
-
 }
 .logo a{
-    font-size: 35px;
+    font-size: 2rem;
     font-weight: 600;
     color: white;
     text-decoration: none;
 }
-li{
+nav li{
     list-style: none;
     display: inline-block;
 }
-li a{
+nav li a{
     color: white;
     font-size:  18px;
     font-weight: bold;
-    margin-right:  25px;
+    margin-right:  2rem;
     text-decoration: none;
 }
 button{
@@ -49,15 +47,7 @@ button a{
     text-decoration: none;
 }
 
- .home-header {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    padding: 0;
-    margin: 0;
-    
-    padding: 1rem;
-}
+ 
 
 .log-in {
     background-color: aqua;
@@ -73,16 +63,26 @@ button a{
 
 
 #calendar {
-    width: 100%;
+    width: 80%;
     padding: 1rem;
+    margin: auto;
     border-collapse: collapse;
+    min-height: 10rem;
     
+}
+
+
+#calendar tr {
+    width: 100%;
 }
 
 #calendar th, #calendar td{
     border: .2rem solid black;
+    width:  14%;
+    padding: 1rem;
+    padding-right: 2rem;
 }
 
-#calendar li {
+#calendar ul {
     list-style-type:disc;
 }

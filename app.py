@@ -1,4 +1,5 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request
+from cryptography.fernet import Fernet
 
 app = Flask(__name__)
 
@@ -19,7 +20,21 @@ def home():
 
 # @app.route("/view/<name>/")
 
+@app.route("/login", methods = ["POST", "GET"])
+def login():
+    if request.method == "POST":
+        for pair in request.form.items():
+            print(pair)
 
+
+        return home()
+    else:
+        return render_template("login.html" )
+
+
+
+def encrypt(password):
+    return Fernet("ok").encrypt(password)
 
  
 
