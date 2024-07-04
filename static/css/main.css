@@ -86,3 +86,53 @@ button a{
 #calendar ul {
     list-style-type:disc;
 }
+
+.signin-box {
+    width: 700px;
+    height: 800px;
+    margin: auto;
+    background-color: rgba(255, 0, 0, 0.123);
+    border-radius: 3px;
+}
+
+.signin-box h1{
+    text-align: center;
+    padding-top: 15px;
+
+}
+
+.signin-box h2{
+    text-align: center;
+    padding-top: 5;
+    font-size: medium;
+
+}
+.signin-box form{
+    padding-top: 20px;
+    width: auto;
+    margin-left: 20px;
+    margin-right: 35px;
+
+
+}
+
+.signin-box form label{
+    display: flex;
+    margin-top: 20px;
+    font-size: 18px;
+}
+.signin-box form input{
+    width: 100%;
+    padding: 7px;
+    border: none;
+}
+.signin-box input[type = "button"]{
+    width: 103%;
+    height: 35px;
+    margin-top: 20px;
+    border: none;
+    background-color: red;
+
+
+}
+
