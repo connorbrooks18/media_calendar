@@ -9,6 +9,7 @@ with open("key", "r") as f:
 
 
 
+
 app = Flask(__name__)
 
 events = [
@@ -42,9 +43,15 @@ def login():
 @app.route("/signup", methods = ["POST", "GET"])
 def signup():
     if request.method == "POST":
-        for pair in request.form.items():
-            print(pair)
-
+        # for key, value in request.form.items():
+        #     print(pair)
+        conn = sql.connect("media.db")
+        curs = conn.cursor()
+        curs.execute("INSERT INTO users VALUES (?, ?, ?, ?)", [value for key, value in request.form.items()])
+        print(curs.execute("SELECT * FROM users").fetchall())
+        conn.commit()
+        curs.close()
+        conn.close()
 
         return redirect(url_for("home"))
     else:
@@ -59,3 +66,5 @@ def encrypt(password):
 
 if __name__ == '__main__':
     app.run(debug=True)
+
+

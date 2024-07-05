@@ -1,21 +1,18 @@
-# import sqlite3 as sql
+import sqlite3 as sql
 
-# conn = sql.connect("media.db")
+conn = sql.connect("media.db")
 
-# cur = conn.cursor()
+cur = conn.cursor()
 
-# cur.execute("CREATE TABLE users (email TEXT, e_pass TEXT)")
+cur.execute("""CREATE TABLE IF NOT EXISTS users (
+            name1 TEXT, 
+            name2 TEXT, 
+            email TEXT NOT NULL UNIQUE, 
+            e_pass TEXT NOT NULL
+            )""")
 
-# rows = cur.execute("SELECT rowid, name FROM media").fetchall()
-# print(rows)
+print(cur.execute("SELECT * FROM users").fetchall())
 
 
-# cur.close()
-# conn.close()
-
-from cryptography.fernet import Fernet
-
-key = Fernet.generate_key()
-
-with open("key", "w") as f:
-    f.write(str(key))
+cur.close()
+conn.close()
