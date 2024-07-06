@@ -47,7 +47,7 @@ def signup():
         #     print(pair)
         conn = sql.connect("media.db")
         curs = conn.cursor()
-        curs.execute("INSERT INTO users VALUES (?, ?, ?, ?)", [value for key, value in request.form.items()])
+        curs.execute("INSERT INTO users VALUES (?, ?, ?, ?)", [value for _, value in request.form.items()])
         print(curs.execute("SELECT * FROM users").fetchall())
         conn.commit()
         curs.close()
